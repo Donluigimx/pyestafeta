@@ -1,0 +1,49 @@
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:est="http://estafetalabel.webservices.estafeta.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <est:createLabel soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <in0 xsi:type="dto:EstafetaLabelRequest" xmlns:dto="http://dto.estafetalabel.webservices.estafeta.com">
+            <customerNumber xsi:type="xsd:string">{customerNumber}</customerNumber>
+            <!--1 or more repetitions:-->
+            <labelDescriptionList xsi:type="dto:LabelDescriptionList">
+               <content xsi:type="xsd:string">{data[content]}</content>
+               <!--<contentDescription xsi:type="xsd:string">ORO</contentDescription>-->
+               <!--<costCenter xsi:type="xsd:string">12345</costCenter>-->
+               <deliveryToEstafetaOffice xsi:type="xsd:boolean">{data[deliveryToEstafetaOffice]}</deliveryToEstafetaOffice>
+               <destinationCountryId xsi:type="xsd:string">{data[destinationCountryId]}</destinationCountryId>
+               {destinationInfo}
+               <numberOfLabels xsi:type="xsd:int">{data[numberOfLabels]}</numberOfLabels>
+               <officeNum xsi:type="xsd:string">{data[officeNum]}</officeNum>
+               {originInfo}
+               <!--<originInfo xsi:type="dto:OriginInfo">
+                  <address1 xsi:type="xsd:string">CALLE 5</address1>
+                  <address2 xsi:type="xsd:string">29</address2>
+                  <cellPhone xsi:type="xsd:string">888888</cellPhone>
+                  <city xsi:type="xsd:string">TLALPAN</city>
+                  <contactName xsi:type="xsd:string">JANET OIDOR</contactName>
+                  <corporateName xsi:type="xsd:string">ALTAS SA DE CV</corporateName>
+                  <customerNumber xsi:type="xsd:string">0000000</customerNumber>
+                  <neighborhood xsi:type="xsd:string">CENTRO</neighborhood>
+                  <phoneNumber xsi:type="xsd:string">9999999</phoneNumber>
+                  <state xsi:type="xsd:string">DF</state>
+                  <valid xsi:type="xsd:boolean">True</valid>
+                  <zipCode xsi:type="xsd:string">02300</zipCode>
+               </originInfo>-->
+               <originZipCodeForRouting xsi:type="xsd:string">{data[originZipCodeForRouting]}</originZipCodeForRouting>
+               <parcelTypeId xsi:type="xsd:int">{data[parcelTypeId]}</parcelTypeId>
+               <returnDocument xsi:type="xsd:boolean">{data[returnDocument]}</returnDocument>
+               <serviceTypeId xsi:type="xsd:string">{data[serviceTypeId]}</serviceTypeId>
+               <valid xsi:type="xsd:boolean">{data[valid]}</valid>
+               <weight xsi:type="xsd:float">{data[weight]}</weight>
+            </labelDescriptionList>
+            <labelDescriptionListCount xsi:type="xsd:int">1</labelDescriptionListCount>
+            <login xsi:type="xsd:string">{username}</login>
+            <paperType xsi:type="xsd:int">{paperType}</paperType>
+            <password xsi:type="xsd:string">{password}</password>
+            <quadrant xsi:type="xsd:int">0</quadrant>
+            <suscriberId xsi:type="xsd:string">{id}</suscriberId>
+            <valid xsi:type="xsd:boolean">True</valid>
+         </in0>
+      </est:createLabel>
+   </soapenv:Body>
+</soapenv:Envelope>

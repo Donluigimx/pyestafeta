@@ -1,0 +1,14 @@
+<{shipment_info} xsi:type="dto:{shipment_info}">
+    <address1 xsi:type="xsd:string">{data[address1]}</address1>
+    <address2 xsi:type="xsd:string">{data[address2]}</address2>
+    <cellPhone xsi:type="xsd:string">{data[cellPhone]}</cellPhone>
+    <city xsi:type="xsd:string">{data[city]}</city>
+    <contactName xsi:type="xsd:string">{data[contactName]}</contactName>
+    <corporateName xsi:type="xsd:string">{data[corporateName]}</corporateName>
+    <customerNumber xsi:type="xsd:string">{data[customerNumber]}</customerNumber>
+    <neighborhood xsi:type="xsd:string">{data[neighborhood]}</neighborhood>
+    <phoneNumber xsi:type="xsd:string">{data[phoneNumber]}</phoneNumber>
+    <state xsi:type="xsd:string">{data[state]}</state>
+    <valid xsi:type="xsd:boolean">{data[valid]}</valid>
+    <zipCode xsi:type="xsd:string">{data[zipCode]}</zipCode>
+</{shipment_info}>
